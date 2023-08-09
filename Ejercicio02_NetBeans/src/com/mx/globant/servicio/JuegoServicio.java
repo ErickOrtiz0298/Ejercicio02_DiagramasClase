@@ -13,7 +13,8 @@ public class JuegoServicio {
         Juego juego = new Juego();
         System.out.println("Ingrese el numero de jugadores");
         juego.setJugadores(ingresarJugadores(jugadores,sc.nextInt()));
-        juego.setR(RevolverAguaServicio.crearRevolver());
+        juego.setR(r);
+        mostrarCondiciones(juego);
         return juego;
     }
     
@@ -34,7 +35,26 @@ public class JuegoServicio {
         return jugadores;
     }
     
+    public static boolean ronda(Jugador jugador, RevolverAgua revolver){
+        jugador.setMojado(JugadorServicio.disparo(revolver));
+        
+        if(jugador.getMojado()){
+            System.out.println("El jugador: " + jugador.getId() + " ha sido mojado");
+            return true;
+        }else{
+            System.out.println("El jugador: " + jugador.getId() + " se ha salvado");
+        }
+        return false;
+    }
     
-    
+    protected static void mostrarCondiciones(Juego juego){
+        System.out.println("Se ha creado el luego con los jugadores");
+        for(Jugador jugador: juego.getJugadores()){
+            System.out.println(jugador.getNombre());
+        }
+        
+        System.out.println("El revolver tiene las condiciones" + juego.getR().toString());
+        
+    }
     
 }

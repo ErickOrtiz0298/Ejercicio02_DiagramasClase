@@ -10,11 +10,11 @@ public class RevolverAguaServicio {
         return r;
     }
     
-    public static void llenarRevolver(RevolverAgua revolver){
+    public static RevolverAgua llenarRevolver(RevolverAgua revolver){
         int rand = (int)(Math.random() * 6 - 1 ) + 1;
         revolver.setPosicionAgua(rand);
         revolver.setPosicionActual(rand);
-        
+        return revolver;
     }
     
     protected static boolean mojar(RevolverAgua revolver){
