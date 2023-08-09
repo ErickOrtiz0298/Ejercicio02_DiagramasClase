@@ -28,9 +28,6 @@ public class RevolverAgua {
         this.posicionAgua = posicionAgua;
     }
     
-    
-    
-
     @Override
     public String toString() {
         return "RevolverAgua{" + "posicionActual=" + posicionActual + ", posicionAgua=" + posicionAgua + '}';
