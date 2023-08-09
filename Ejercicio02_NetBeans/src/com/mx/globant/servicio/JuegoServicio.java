@@ -13,7 +13,7 @@ public class JuegoServicio {
         Juego juego = new Juego();
         System.out.println("Ingrese el numero de jugadores");
         juego.setJugadores(ingresarJugadores(jugadores,sc.nextInt()));
-        juego.setR(r);
+        juego.setR(RevolverAguaServicio.llenarRevolver(r));
         mostrarCondiciones(juego);
         return juego;
     }
