@@ -11,9 +11,9 @@ public class RevolverAguaServicio {
     }
     
     public static RevolverAgua llenarRevolver(RevolverAgua revolver){
-        int rand = (int)(Math.random() * 6 - 1 ) + 1;
-        revolver.setPosicionAgua(rand);
-        revolver.setPosicionActual(rand);
+        //int rand = (int)(Math.random() * 6 - 1 ) + 1;
+        revolver.setPosicionAgua((int)(Math.random() * 6 - 1 ) + 1);
+        revolver.setPosicionActual((int)(Math.random() * 6 - 1 ) + 1);
         return revolver;
     }
     
