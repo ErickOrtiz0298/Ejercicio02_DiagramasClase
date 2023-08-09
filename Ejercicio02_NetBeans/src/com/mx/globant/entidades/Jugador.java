@@ -5,12 +5,12 @@ public class Jugador {
     private static Integer idJugador = 0;
     private Integer id; 
     private String nombre = "Jugador"; 
-    private Boolean mojado = true; 
+    private Boolean mojado; 
+
+    /*public Jugador() {
+    }*/
 
     public Jugador() {
-    }
-
-    public Jugador(String nombre) {
         this.id = ++idJugador;
         this.nombre = this.nombre + idJugador;
     }
@@ -38,8 +38,5 @@ public class Jugador {
     public void setMojado(Boolean mojado) {
         this.mojado = mojado;
     }
-    
-    
-    
     
 }
